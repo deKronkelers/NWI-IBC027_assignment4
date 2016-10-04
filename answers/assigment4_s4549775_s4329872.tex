@@ -36,5 +36,16 @@ By assuming that any non-leaf node contains the smallest element we get a contra
 
 \section{} %5
 \section{} %6
+Making all edge's weights non-negative by adding a constant to all edges is a valid method. This makes distances monotonically increasing. Dijksta's algorithm is greedy and always explores the node with the lowest distance.
+
+We have out invariants:
+\begin{itemize}
+	\item $dist(A)$ is the shortest path from start $S$ to $A$ for each visited node $A$.
+	\item $dist(X)$ is the shortest path from $S$ to $X$ we know of, for each unvisited node $X$.
+\end{itemize}
+
+With just one visited node they are obviously true.
+
+We also assume this for $k$ visited nodes and choose the unvisited node $X$ for which $dist(X)$ is minimal (greedy) and $dist(X) = dist(A) + weight((A, X))$. $dist(X)$ must be minimal as if there were a shorter path to $X$ via another unvisited node $Y$ then $dist(Y)$ would need to be less than $dist(X)$ because the distance is monotonically increasing. This cannot be true according to our invariants because if $dist(Y) < dist(X)$ then $Y$ is explored before $X$.
 
 \end{document}
