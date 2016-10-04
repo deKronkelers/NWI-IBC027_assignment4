@@ -644,6 +644,10 @@ I a max-heap the smallest element may reside inside a leaf node. This can be pro
 By assuming that any non-leaf node contains the smallest element we get a contradiction the smallest value may only reside inside a leaf node.
 
 \section{} %5
+We want to find the shortest path from $u$ to $v$ that passes through $v_0$.
+
+First we perform Dijkstra's algorithm to find the shortest paths between all nodes. The shortest path from $u$ to $v$ passing through $v_0$ is $(u, v_0) + (v_0, v)$. Dijkstra's algorithm already gave us $(u, v_0)$ and $(v_0, v)$.
+
 \section{} %6
 Making all edge's weights non-negative by adding a constant to all edges is a valid method. This makes distances monotonically increasing. Dijksta's algorithm is greedy and always explores the node with the lowest distance.
 
