@@ -28,10 +28,10 @@ Dijkstra's algorithm produces wrong output for some graphs with negatively weigh
 	\node[c, right=of B] (C) {C};
 	\node[c, below=of B] (D) {D};
 
-	\path (A) edge node[above] {1} (B);
-	\path (A) edge node[below] {3} (D);
-	\path (B) edge node[above] {1} (C);
-	\path (D) edge node[below] {-2} (C);
+	\path[->, thick] (A) edge node[above] {1} (B);
+	\path[->, thick] (A) edge node[below] {3} (D);
+	\path[->, thick] (B) edge node[above] {1} (C);
+	\path[->, thick] (D) edge node[below] {-2} (C);
 \end{tikzpicture}
 
 \section{} %4
