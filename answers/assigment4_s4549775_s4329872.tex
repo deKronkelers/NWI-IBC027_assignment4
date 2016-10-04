@@ -19,6 +19,474 @@ This was done in collaboration with Hendrik Werner (s4549775).
 
 \section{} %1
 \section{} %2
+We use alphabetical order as a tie breaker and begin at node $A$:
+
+\begin{enumerate}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}]
+		\node[c] (A) {$A$};
+		\node[below=0em of A] (A_label) {$\infty$};
+		\node[c, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$\infty$};
+		\node[c, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$\infty$};
+		\node[c, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$\infty$};
+		\node[c, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$\infty$};
+		\node[c, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$\infty$};
+		\node[c, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$\infty$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$\infty$};
+
+		\path (A) edge node[below] {5} (B);
+		\path (A) edge node[auto] {4} (E);
+		\path (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path (B) edge node[auto] {10} (G);
+		\path (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$\infty$};
+		\node[c, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$\infty$};
+		\node[c, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$\infty$};
+		\node[c, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$\infty$};
+		\node[c, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$\infty$};
+		\node[c, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$\infty$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$\infty$};
+
+		\path (A) edge node[below] {5} (B);
+		\path (A) edge node[auto] {4} (E);
+		\path (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path (B) edge node[auto] {10} (G);
+		\path (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$5$};
+		\node[c, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$\infty$};
+		\node[c, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$\infty$};
+		\node[c, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$4$};
+		\node[c, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$\infty$};
+		\node[c, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$\infty$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$\infty$};
+
+		\path (A) edge node[below] {5} (B);
+		\path (A) edge node[auto] {4} (E);
+		\path (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path (B) edge node[auto] {10} (G);
+		\path (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$5$};
+		\node[c, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$\infty$};
+		\node[c, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$\infty$};
+		\node[c, v, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$4$};
+		\node[c, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$\infty$};
+		\node[c, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$\infty$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$\infty$};
+
+		\path (A) edge node[below] {5} (B);
+		\path[s] (A) edge node[auto] {4} (E);
+		\path (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path (B) edge node[auto] {10} (G);
+		\path (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$5$};
+		\node[c, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$\infty$};
+		\node[c, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$\infty$};
+		\node[c, v, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$4$};
+		\node[c, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$15$};
+		\node[c, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$\infty$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$\infty$};
+
+		\path (A) edge node[below] {5} (B);
+		\path[s] (A) edge node[auto] {4} (E);
+		\path (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path (B) edge node[auto] {10} (G);
+		\path (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$5$};
+		\node[c, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$\infty$};
+		\node[c, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$\infty$};
+		\node[c, v, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$4$};
+		\node[c, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$15$};
+		\node[c, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$\infty$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$\infty$};
+
+		\path[s] (A) edge node[below] {5} (B);
+		\path[s] (A) edge node[auto] {4} (E);
+		\path (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path (B) edge node[auto] {10} (G);
+		\path (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$5$};
+		\node[c, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$11$};
+		\node[c, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$\infty$};
+		\node[c, v, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$4$};
+		\node[c, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$15$};
+		\node[c, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$15$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$\infty$};
+
+		\path[s] (A) edge node[below] {5} (B);
+		\path[s] (A) edge node[auto] {4} (E);
+		\path (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path (B) edge node[auto] {10} (G);
+		\path (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$5$};
+		\node[c, v, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$11$};
+		\node[c, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$\infty$};
+		\node[c, v, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$4$};
+		\node[c, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$15$};
+		\node[c, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$15$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$\infty$};
+
+		\path[s] (A) edge node[below] {5} (B);
+		\path[s] (A) edge node[auto] {4} (E);
+		\path[s] (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path (B) edge node[auto] {10} (G);
+		\path (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$5$};
+		\node[c, v, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$11$};
+		\node[c, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$12$};
+		\node[c, v, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$4$};
+		\node[c, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$15$};
+		\node[c, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$15$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$28$};
+
+		\path[s] (A) edge node[below] {5} (B);
+		\path[s] (A) edge node[auto] {4} (E);
+		\path[s] (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path (B) edge node[auto] {10} (G);
+		\path (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$5$};
+		\node[c, v, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$11$};
+		\node[c, v, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$12$};
+		\node[c, v, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$4$};
+		\node[c, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$15$};
+		\node[c, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$15$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$28$};
+
+		\path[s] (A) edge node[below] {5} (B);
+		\path[s] (A) edge node[auto] {4} (E);
+		\path[s] (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path (B) edge node[auto] {10} (G);
+		\path[s] (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$5$};
+		\node[c, v, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$11$};
+		\node[c, v, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$12$};
+		\node[c, v, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$4$};
+		\node[c, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$15$};
+		\node[c, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$15$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$24$};
+
+		\path[s] (A) edge node[below] {5} (B);
+		\path[s] (A) edge node[auto] {4} (E);
+		\path[s] (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path (B) edge node[auto] {10} (G);
+		\path[s] (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$5$};
+		\node[c, v, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$11$};
+		\node[c, v, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$12$};
+		\node[c, v, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$4$};
+		\node[c, v, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$15$};
+		\node[c, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$15$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$24$};
+
+		\path[s] (A) edge node[below] {5} (B);
+		\path[s] (A) edge node[auto] {4} (E);
+		\path[s] (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path (B) edge node[auto] {10} (G);
+		\path[s] (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path[s] (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$5$};
+		\node[c, v, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$11$};
+		\node[c, v, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$12$};
+		\node[c, v, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$4$};
+		\node[c, v, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$15$};
+		\node[c, v, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$15$};
+		\node[c, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$24$};
+
+		\path[s] (A) edge node[below] {5} (B);
+		\path[s] (A) edge node[auto] {4} (E);
+		\path[s] (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path[s] (B) edge node[auto] {10} (G);
+		\path[s] (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path (D) edge node[auto] {12} (H);
+		\path[s] (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(E.north), node distance=5em ,c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {$A$};
+		\node[below=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {$B$};
+		\node[below=0em of B] (B_label) {$5$};
+		\node[c, v, right=of B] (C) {$C$};
+		\node[below=0em of C] (C_label) {$11$};
+		\node[c, v, right=of C] (D) {$D$};
+		\node[below=0em of D] (D_label) {$12$};
+		\node[c, v, above=of A] (E) {$E$};
+		\node[above=0em of E] (E_label) {$4$};
+		\node[c, v, above=of B] (F) {$F$};
+		\node[above=0em of F] (F_label) {$15$};
+		\node[c, v, above=of C] (G) {$G$};
+		\node[above=0em of G] (G_label) {$15$};
+		\node[c, v, above=of D] (H) {$H$};
+		\node[above=0em of H] (H_label) {$24$};
+
+		\path[s] (A) edge node[below] {5} (B);
+		\path[s] (A) edge node[auto] {4} (E);
+		\path[s] (B) edge node[below] {6} (C);
+		\path (B) edge node[auto] {3} (E);
+		\path (B) edge node[auto] {14} (F);
+		\path[s] (B) edge node[auto] {10} (G);
+		\path[s] (C) edge node[below] {1} (D);
+		\path (C) edge node[auto] {9} (G);
+		\path (C) edge node[auto] {17} (H);
+		\path[s] (D) edge node[auto] {12} (H);
+		\path[s] (E) edge node[auto] {11} (F);
+		\path (F) edge node[auto] {7} (G);
+		\path (G) edge node[auto] {15} (H);
+	\end{tikzpicture}
+\end{enumerate}
+
+
 \section{} %3
 Dijkstra's algorithm produces wrong output for some graphs with negatively weighted edges such as this one:
 
