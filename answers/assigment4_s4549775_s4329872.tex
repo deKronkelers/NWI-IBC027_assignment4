@@ -20,6 +20,20 @@ This was done in collaboration with Hendrik Werner (s4549775).
 \section{} %1
 \section{} %2
 \section{} %3
+Dijkstra's algorithm produces wrong output for some graphs with negatively weighted edges such as this one:
+
+\begin{tikzpicture}[c/.style={circle, draw, minimum width=3em}]
+	\node[c] (A) {A};
+	\node[c, right=of A] (B) {B};
+	\node[c, right=of B] (C) {C};
+	\node[c, below=of B] (D) {D};
+
+	\path (A) edge node[above] {1} (B);
+	\path (A) edge node[below] {3} (D);
+	\path (B) edge node[above] {1} (C);
+	\path (D) edge node[below] {-2} (C);
+\end{tikzpicture}
+
 \section{} %4
 I a max-heap the smallest element may reside inside a leaf node. This can be proven by a property of the heap: "If node $A$ is a parent of node $B$ then the value of $A$ is ordered with respect to the value of node B with the same ordering applying across the whole heap.". For a max-heap this ordering is $A > B$.
 
