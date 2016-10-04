@@ -21,6 +21,19 @@ This was done in collaboration with Hendrik Werner (s4549775).
 \section{} %2
 \section{} %3
 \section{} %4
+I a max-heap the smallest element may reside inside a leaf node. This can be proven by a property of the heap: "If node $A$ is a parent of node $B$ then the value of $A$ is ordered with respect to the value of node B with the same ordering applying across the whole heap.". For a max-heap this ordering is $A > B$.
+
+\begin{enumerate}
+	\item \label{q4:a_is_smallest}
+	We look at any non-leaf node $A$ and assume it contains the smallest element in the heap.
+	\item \label{q4:b_is_smaller}
+	According to our heap property child $B$ of node $A$ contains a smaller value than $A$.
+	\item
+	(\ref{q4:b_is_smaller}) and (\ref{q4:a_is_smallest}) contradict each other.
+\end{enumerate}
+
+By assuming that any non-leaf node contains the smallest element we get a contradiction the smallest value may only reside inside a leaf node.
+
 \section{} %5
 \section{} %6
 
