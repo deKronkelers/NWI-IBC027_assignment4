@@ -34,6 +34,132 @@ Dijkstra's algorithm produces wrong output for some graphs with negatively weigh
 	\path[->, thick] (D) edge node[below] {-2} (C);
 \end{tikzpicture}
 
+When we run Dijkstra's algorithm:
+
+\begin{enumerate}
+	\item
+	\begin{tikzpicture}[baseline=(A.north), c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}]
+		\node[c] (A) {A};
+		\node[above=0em of A] (A_label) {$\infty$};
+		\node[c, right=of A] (B) {B};
+		\node[above=0em of B] (B_label) {$\infty$};
+		\node[c, right=of B] (C) {C};
+		\node[above=0em of C] (C_label) {$\infty$};
+		\node[c, below=of B] (D) {D};
+		\node[below=0em of D] (D_label) {$\infty$};
+
+
+		\path[->, thick] (A) edge node[above] {1} (B);
+		\path[->, thick] (A) edge node[below] {3} (D);
+		\path[->, thick] (B) edge node[above] {1} (C);
+		\path[->, thick] (D) edge node[below] {-2} (C);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(A.north), c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}]
+		\node[c, v] (A) {A};
+		\node[above=0em of A] (A_label) {$0$};
+		\node[c, right=of A] (B) {B};
+		\node[above=0em of B] (B_label) {$\infty$};
+		\node[c, right=of B] (C) {C};
+		\node[above=0em of C] (C_label) {$\infty$};
+		\node[c, below=of B] (D) {D};
+		\node[below=0em of D] (D_label) {$\infty$};
+
+
+		\path[->, thick] (A) edge node[above] {1} (B);
+		\path[->, thick] (A) edge node[below] {3} (D);
+		\path[->, thick] (B) edge node[above] {1} (C);
+		\path[->, thick] (D) edge node[below] {-2} (C);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(A.north), c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}]
+		\node[c, v] (A) {A};
+		\node[above=0em of A] (A_label) {$0$};
+		\node[c, right=of A] (B) {B};
+		\node[above=0em of B] (B_label) {$1$};
+		\node[c, right=of B] (C) {C};
+		\node[above=0em of C] (C_label) {$\infty$};
+		\node[c, below=of B] (D) {D};
+		\node[below=0em of D] (D_label) {$3$};
+
+
+		\path[->, thick] (A) edge node[above] {1} (B);
+		\path[->, thick] (A) edge node[below] {3} (D);
+		\path[->, thick] (B) edge node[above] {1} (C);
+		\path[->, thick] (D) edge node[below] {-2} (C);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(A.north), c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {A};
+		\node[above=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {B};
+		\node[above=0em of B] (B_label) {$1$};
+		\node[c, right=of B] (C) {C};
+		\node[above=0em of C] (C_label) {$\infty$};
+		\node[c, below=of B] (D) {D};
+		\node[below=0em of D] (D_label) {$3$};
+
+
+		\path[->, thick, s] (A) edge node[above] {1} (B);
+		\path[->, thick] (A) edge node[below] {3} (D);
+		\path[->, thick] (B) edge node[above] {1} (C);
+		\path[->, thick] (D) edge node[below] {-2} (C);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(A.north), c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {A};
+		\node[above=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {B};
+		\node[above=0em of B] (B_label) {$1$};
+		\node[c, right=of B] (C) {C};
+		\node[above=0em of C] (C_label) {$2$};
+		\node[c, below=of B] (D) {D};
+		\node[below=0em of D] (D_label) {$3$};
+
+
+		\path[->, thick, s] (A) edge node[above] {1} (B);
+		\path[->, thick] (A) edge node[below] {3} (D);
+		\path[->, thick] (B) edge node[above] {1} (C);
+		\path[->, thick] (D) edge node[below] {-2} (C);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(A.north), c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {A};
+		\node[above=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {B};
+		\node[above=0em of B] (B_label) {$1$};
+		\node[c, v, right=of B] (C) {C};
+		\node[above=0em of C] (C_label) {$2$};
+		\node[c, below=of B] (D) {D};
+		\node[below=0em of D] (D_label) {$3$};
+
+
+		\path[->, thick, s] (A) edge node[above] {1} (B);
+		\path[->, thick] (A) edge node[below] {3} (D);
+		\path[->, thick, s] (B) edge node[above] {1} (C);
+		\path[->, thick] (D) edge node[below] {-2} (C);
+	\end{tikzpicture}
+	\item
+	\begin{tikzpicture}[baseline=(A.north), c/.style={circle, draw, minimum width=3em}, v/.style={fill=gray}, s/.style={line width=.25em}]
+		\node[c, v] (A) {A};
+		\node[above=0em of A] (A_label) {$0$};
+		\node[c, v, right=of A] (B) {B};
+		\node[above=0em of B] (B_label) {$1$};
+		\node[c, v, right=of B] (C) {C};
+		\node[above=0em of C] (C_label) {$2$};
+		\node[c, v, below=of B] (D) {D};
+		\node[below=0em of D] (D_label) {$3$};
+
+
+		\path[->, thick, s] (A) edge node[above] {1} (B);
+		\path[->, thick, s] (A) edge node[below] {3} (D);
+		\path[->, thick, s] (B) edge node[above] {1} (C);
+		\path[->, thick] (D) edge node[below] {-2} (C);
+	\end{tikzpicture}
+\end{enumerate}
+
+The shortest path it finds is $((A, B), (B, C))$ which is of length $2$ while $((A, D), (D, C))$ is of length $1$. This is because the algorithm assumes that path lengths are monotonically increasing. This allows it to further assume that by being greedy it finds the shortest paths. By giving edges negative weights we violate that property and the algorithms fails to find the shortest path.
+
 \section{} %4
 I a max-heap the smallest element may reside inside a leaf node. This can be proven by a property of the heap: "If node $A$ is a parent of node $B$ then the value of $A$ is ordered with respect to the value of node B with the same ordering applying across the whole heap.". For a max-heap this ordering is $A > B$.
 
